@@ -179,8 +179,8 @@
         <!-- FAQ Section -->
         <section class="relative font-['Times_New_Roman',serif]">
             <img src="images/materi/bg-section3.svg" alt="section3"
-                class="w-full h-[180vw] object-cover object-center md:h-auto">
-            <div class="absolute inset-0 flex flex-col items-center gap-6 p-2 md:p-4 z-[4]">
+                class="absolute inset-0 w-full h-full object-cover object-center z-0">
+            <div class="relative z-[4] w-full px-4 flex flex-col items-center gap-6">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item mb-4 w-full">
                     <button
@@ -542,7 +542,7 @@
         // Create dots dynamically
         slides.forEach((_, index) => {
             const dot = document.createElement('span');
-            dot.className = `dot sm:h-4 h-3 rounded-full transition-all cursor-pointer ${index === 0 ? 'w-6 sm:w-8 bg-[#7A3D21]' : 'w-3 sm:w-4 bg-[#C07E4E]/60'
+            dot.className = `dot sm:h-4 h-3 rounded-full transition-all cursor-pointer ${index === 0 ? 'w-6 sm:w-8 bg-[#7A3D21]' : 'w-3 sm:w-4 bg-[#C07E4E]'
                 }`;
             dot.addEventListener('click', () => goToSlide(index));
             dotsContainer.appendChild(dot);
@@ -555,7 +555,7 @@
                 if (index === currentIndex) {
                     dot.className = 'dot w-6 sm:w-8 h-3 sm:h-4 bg-[#7A3D21] rounded-full transition-all cursor-pointer';
                 } else {
-                    dot.className = 'dot w-3 sm:w-4 h-3 sm:h-4 bg-[#C07E4E]/60 rounded-full transition-all cursor-pointer';
+                    dot.className = 'dot w-3 sm:w-4 h-3 sm:h-4 bg-[#C07E4E] rounded-full transition-all cursor-pointer';
                 }
             });
         }
